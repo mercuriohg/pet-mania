@@ -1,0 +1,9 @@
+@import url('./cadastro.css');
+@import url('./reset.css');
+:root{
+    --color-primary: #A7D8F5;
+    --color-secondary: #DFF4FF;
+    --color-tertiary: #FFFFFF;
+    --color-quaternary: #6CB4EE;
+    --text: #4A4A4A;
+}

@@ -23,9 +23,10 @@
             <li><a href="/adocao">Projeto</a></li>
             <li><a href="/compra"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
+        <i id="menu-toggle" class="fas fa-bars"></i>
     </header>
     <nav id="container-nav">
-        <ul>
+        <ul class="p-0">
             <li><a href="/produtos">Produtos</a></li>
             <li><a href="/servico">Serviço de Pet</a></li>
             <li><a href="/sobre">Sobre</a></li>
@@ -33,7 +34,7 @@
     </nav>
      <main id="container-login">
          <div id="login-container">
-                <form action="/login_validate" method="post" id="login-form">
+                <form action="/loginConfirm" method="post" id="login-form">
                 <h2>Login</h2>
                 <div id="user-box">
                   <label>Usuário:</label>

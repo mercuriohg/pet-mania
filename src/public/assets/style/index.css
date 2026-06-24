@@ -3,6 +3,7 @@
 @import url('./header.css');
 @import url('./404.css');
 @import url('./login.css');
+@import url('./responsivo.css');
 :root{
     --color-primary: #59b2e6;
     --color-secondary: #31a4e2;

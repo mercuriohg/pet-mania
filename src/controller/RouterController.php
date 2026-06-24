@@ -4,25 +4,44 @@ class RouterController
 {
     public static function route($uri)
     {
-        $routes = [
-            //PAGES
-            '' => __DIR__ . '/../views/index.php',
-            'login' => __DIR__ . '/../views/login.php',
-            'servico' => __DIR__ . '/../views/servico.php',
-            'cadastro' => __DIR__ . '/../views/cadastro.php',
-            
+        switch ($uri) {
 
-            //APIS
-            'login_validate' => __DIR__ . '/../api/login_validate.php',
-            'cadastro_validate' => __DIR__ . '/../api/cadastro_validate.php',
-            
-        ];
+            // ===== PÁGINAS =====
+            case '':
+                require_once __DIR__ . '/../views/index.php';
+                break;
 
-        if (isset($routes[$uri])) {
-            require $routes[$uri];
-            return;
+            case 'login':
+                require_once __DIR__ . '/../views/login.php';
+                break;
+
+            case 'cadastro':
+                require_once __DIR__ . '/../views/cadastro.php';
+                break;
+
+            case 'servico':
+                require_once __DIR__ . '/../views/servico.php';
+                break;
+
+            // ===== AÇÕES =====
+            case 'loginConfirm':
+                require_once __DIR__ . '/LoginController.php';
+
+                $controller = new LoginController();
+                $controller->login();
+                break;
+
+            case 'cadastro_validate':
+                require_once __DIR__ . '/CadastroController.php';
+
+                $controller = new CadastroController();
+                $controller->cadastro();
+                break;
+
+            // ===== 404 =====
+            default:
+                require_once __DIR__ . '/../views/404.php';
+                break;
         }
-
-        require __DIR__ . '/../views/404.php';
     }
 }

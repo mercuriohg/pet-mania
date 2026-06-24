@@ -23,9 +23,11 @@
             <li><a href="/adocao">Projeto</a></li>
             <li><a href="/compra"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
+                <i id="menu-toggle" class="fas fa-bars"></i>
+
     </header>
     <nav id="container-nav">
-        <ul>
+        <ul class="p-0">
             <li><a href="/produtos">Produtos</a></li>
             <li><a href="/servico">Serviço de Pet</a></li>
             <li><a href="/sobre">Sobre</a></li>
@@ -127,5 +129,6 @@
     </p>
 
 </footer>
+<script src="/src/public/assets/js/Toogle.js"></script>
 </body>
 </html>

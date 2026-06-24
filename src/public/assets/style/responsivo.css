@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    #menu{
+        display:none;
+    }
+        
+}
+@media (min-width: 769px) and (max-width: 1179px) {
+    #menu-toggle{
+        display:none;
+    }
+}
+
+@media (min-width: 1180px) {
+    #menu-toggle{
+        display:none;
+    }
+}

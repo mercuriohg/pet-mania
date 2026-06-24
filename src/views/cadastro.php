@@ -57,27 +57,36 @@
             </form>
         </div>
     </main>
-      <footer id="container-footer" class="text-center py-4 bg-light">
-        <div id="container-social">
-            
-            <div class="contact-info mb-3">
-                <p>Email: contato@petmania.com</p>
-                <p>Telefone: (11) 1234-5678</p>
-                <p>Endereço: Rua dos Pets, 123 - São Paulo, SP</p>
-            </div>
-            <div class="configuration mb-3">
-                <a href="#" class="mx-2">Configurações</a>
-                <a href="#" class="mx-2">Política de Privacidade</a>
-                <a href="#" class="mx-2">Termos de Uso</a>
-                <a href="#" class="mx-2">Ajuda</a>
-                <a href="#" class="mx-2">Sair</a>
+       <footer id="container-footer" class="bg-light py-4">
+
+    <div id="container-social" class="d-flex justify-content-between w-100 px-5 flex-wrap">
+
+        <div class="contact-info text-start mb-3">
+            <p>Email: contato@petmania.com</p>
+            <p>Telefone: (11) 1234-5678</p>
+            <p>Endereço: Rua dos Pets, 123 - São Paulo, SP</p>
         </div>
-        <div class="social-icons mb-3">
-                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
-            </div>
-        <p>&copy; 2026 Pet Mania. Todos os direitos reservados.</p>
-    </footer>
+
+        <div class="configuration d-grid text-start mb-3">
+            <a href="#" class="text-decoration-none">Configurações</a>
+            <a href="#" class="text-decoration-none">Política de Privacidade</a>
+            <a href="#" class="text-decoration-none">Termos de Uso</a>
+            <a href="#" class="text-decoration-none">Ajuda</a>
+            <a href="#" class="text-decoration-none">Sair</a>
+        </div>
+
+    </div>
+
+    <div class="social-icons text-center mb-3">
+        <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <p class="text-center mb-0">
+        &copy; 2026 Pet Mania. Todos os direitos reservados.
+    </p>
+
+</footer>
 </body>
 </html>

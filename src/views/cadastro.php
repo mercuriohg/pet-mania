@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/assets/style/index.css">
+    <title>Cadastro</title>
       <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -12,11 +11,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-      <link rel="shortcut icon" href="/assets/img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/style/index.css">
+        <link rel="shortcut icon" href="/assets/img/ico.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-     <header id="container-header">
+    <header id="container-header">
         <h1><img src="/assets/img/petmania.png" alt="Pet - Mania" height="150em"></h1>
         <ul id="menu">
             <li><a href="/">Inicio</a></li>
@@ -31,30 +31,33 @@
             <li><a href="/sobre">Sobre</a></li>
         </ul>
     </nav>
-     <main id="container-login">
-         <div id="login-container">
-                <form action="/login_validate" method="post" id="login-form">
-                <h2>Login</h2>
+    <main id="container-cadastro">
+        <div id="cadastro-container">
+            <form action="/cadastro_validate" method="post" id="cadastro-form">
+                <h2>Cadastro</h2>
                 <div id="user-box">
-                  <label>Usuário:</label>
-                  <input type="text" id="username" placeholder="Usuário" class="input-user" name="username">
+                    <label>Usuário:</label>
+                    <input type="text" id="username" placeholder="Usuário" class="input-user" name="username">
+                </div>
+                <div id="email-box">
+                    <label>Email:</label>
+                    <input type="email" id="email" placeholder="Email" class="input-user" name="email">
                 </div>
                 <div id="password-box">
-                  <label>Senha:</label>
-                  <input type="password" id="password" placeholder="Senha" class="input-user" name="password">
-                    </div>
-                    <div id="button-box">
-                <input type="submit" value="Login" class="btn-login">
-                    </div>
-                    <div class="labels">
-                        <span id="error-message"></span>
-                        <label class="style-label">Não tem uma conta? <a href="/cadastro">Cadastre-se</a></label>
-                       <label  class="style-label"><a href="#">Esqueci minha senha</a></label>
-                    </div>
-                    </form>
+                    <label>Senha:</label>
+                    <input type="password" id="password" placeholder="Senha" class="input-user" name="password">
                 </div>
-     </main>
-        <footer id="container-footer" class="text-center py-4 bg-light">
+                <div id="button-box">
+                    <input type="submit" value="Cadastrar" class="btn-cadastro">
+                </div>
+                <div class="labels">
+                    <span id="error-message"></span>
+                    <label class="style-label">Já tem uma conta? <a href="/login">Faça login</a></label>
+                </div>
+            </form>
+        </div>
+    </main>
+      <footer id="container-footer" class="text-center py-4 bg-light">
         <div id="container-social">
             
             <div class="contact-info mb-3">

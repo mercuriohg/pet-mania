@@ -8,7 +8,7 @@ class RouterController
             //PAGES
             '' => __DIR__ . '/../views/index.php',
             'login' => __DIR__ . '/../views/login.php',
-            'adocao' => __DIR__ . '/../views/adocao.php',
+            'servico' => __DIR__ . '/../views/servico.php',
             'cadastro' => __DIR__ . '/../views/cadastro.php',
             
 

@@ -1,0 +1,6 @@
+#container-header{display:flex;justify-content:space-evenly;align-items:center;padding:10px 20px;background-color:rgb(87, 144, 230);color:var(--text);}
+#menu{display:flex;gap:15px;}
+li{list-style:none;}
+li a{color:var(--text);text-decoration:none;font-weight:bold;transition:color 0.3s;}
+#container-nav{display:flex;justify-content:center;align-items:center;padding:10px 20px;background-color:rgb(87, 144, 230);color:var(--text);padding:10px 0px 20px 0px;}
+#container-nav ul{display:flex;gap:15px;}

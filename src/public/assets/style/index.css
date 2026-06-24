@@ -1,9 +1,12 @@
 @import url('./cadastro.css');
 @import url('./reset.css');
+@import url('./header.css');
+@import url('./404.css');
+@import url('./login.css');
 :root{
-    --color-primary: #A7D8F5;
-    --color-secondary: #DFF4FF;
+    --color-primary: #59b2e6;
+    --color-secondary: #31a4e2;
     --color-tertiary: #FFFFFF;
     --color-quaternary: #6CB4EE;
-    --text: #4A4A4A;
+    --text: #e68416;
 }

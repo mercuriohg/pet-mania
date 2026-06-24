@@ -1,6 +1,8 @@
-#container-adoption{background-color:var(--color-primary);color:var(--text); display:flex;justify-content:center;align-items:center;height:100vh;}
+#container-main{background-color:var(--color-quartenary);color:var(--text); display:flex;justify-content:center;align-items:center;height:100vh;}
+
+/*CADASTRO DOS PETS*/
 .style-form{display:flex;flex-direction:column;gap:10px;width:300px;}
-form{background-color:var(--color-tertiary);padding:20px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+form{background-color:var(--color-tertiary);padding:20px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1); border:1px solid var(--color-primary);}
 label{font-weight:bold; color:var(--text); margin-top:5px; margin-left:0px; padding:5px;}
 h2{color:var(--text);text-align:center;margin-bottom:20px;}
 input[type="text"],input[type="date"], input[type="radio"]{padding:8px;border:1px solid #ccc;border-radius:4px;}
@@ -9,3 +11,114 @@ input[type="submit"]:hover{background-color:var(--color-quaternary); color: whit
 .button-container{display:flex;justify-content:center;margin-top:20px;}
 input{border:none;outline:none;}
 textarea{resize:none;border:1px solid #ccc;border-radius:4px;padding:8px;outline:none;}
+form h2{color:black;margin-bottom:15px;}
+
+
+/*CADASTRO DOS USUÁRIOS*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* FUNDO E CENTRALIZAÇÃO */
+#container-cadastro {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;  /* centro horizontal */
+    align-items: center;      /* centro vertical */
+    background: #f4f7fb;
+}
+
+/* CAIXA DE CADASTRO */
+#cadastro-container {
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 16px;
+    width: 380px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* TÍTULO */
+#cadastro-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4f8ef7;
+}
+
+/* LABELS */
+#user-box label,
+#email-box label,
+#password-box label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* INPUTS */
+.input-user {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+    transition: 0.2s;
+    background: #fafafa;
+}
+
+.input-user:focus {
+    border-color: #4f8ef7;
+    box-shadow: 0 0 6px rgba(79, 142, 247, 0.3);
+    background: #fff;
+}
+
+/* BOTÃO */
+.btn-cadastro {
+    width: 100%;
+    padding: 12px;
+    background: #2bd4a7;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cadastro:hover {
+    background: #4f8ef7;
+    transform: scale(1.03);
+}
+
+/* TEXTOS */
+.labels {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.style-label {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.style-label a {
+    color: #2bd4a7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.style-label a:hover {
+    text-decoration: underline;
+}
+
+/* ERRO */
+#error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    display: block;
+    margin-top: 10px;
+}

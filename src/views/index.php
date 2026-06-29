@@ -43,7 +43,7 @@
     <div class="col-md-4">
       <div class="card shadow-sm h-100">
         <span class="badge bg-danger position-absolute m-2">-25%</span>
-        <img src="/assets/img/petmania.png" class="card-img-top" alt="Ração">
+        <img src="/assets/img/racao.png" class="card-img-top" alt="Ração">
         <div class="card-body text-center">
           <h5 class="card-title">Ração Premium 10kg</h5>
           <p class="card-text">Nutrição completa para cães adultos.</p>
@@ -60,7 +60,7 @@
     <div class="col-md-4">
       <div class="card shadow-sm h-100">
         <span class="badge bg-warning text-dark position-absolute m-2">Combo</span>
-        <img src="/assets/img/petmania.png" class="card-img-top" alt="Areia">
+        <img src="/assets/img/areia.png" class="card-img-top" alt="Areia">
         <div class="card-body text-center">
           <h5 class="card-title">Areia Higiênica Ultra</h5>
           <p class="card-text">Controle de odor e alta absorção.</p>

@@ -35,6 +35,17 @@
     </nav>
     <main id="container-cadastro">
         <div id="cadastro-container">
+            <?php
+            session_start();
+            if (!empty($_SESSION['error'])) {
+                echo '<div class="alert alert-danger">' . htmlspecialchars($_SESSION['error']) . '</div>';
+                unset($_SESSION['error']);
+            }
+            if (!empty($_SESSION['success'])) {
+                echo '<div class="alert alert-success">' . htmlspecialchars($_SESSION['success']) . '</div>';
+                unset($_SESSION['success']);
+            }
+            ?>
             <form action="/cadastro_validate" method="post" id="cadastro-form">
                 <h2>Cadastro</h2>
                 <div id="user-box">

@@ -17,13 +17,22 @@
 </head>
 <body id="container-index">
     <header id="container-header">
-        <h1><img src="/assets/img/petmania.png" alt="Pet - Mania" height="150em"></h1>
-        <ul id="menu">
-            <li><a href="/login">Entrar / Cadastro</a></li>
-            <li><a href="/adocao">Projeto</a></li>
-            <li><a href="/compra"><i class="fas fa-shopping-cart"></i></a></li>
-        </ul>
-                <i id="menu-toggle" class="fas fa-bars"></i>
+      <h1><img src="/assets/img/petmania.png" alt="Pet - Mania" height="150em"></h1>
+      <?php
+      session_start();
+      ?>
+      <ul id="menu">
+        <?php if (!empty($_SESSION['username'])): ?>
+          <li><a href="#">Olá, <?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
+          <li><a href="/logout">Sair</a></li>
+        <?php else: ?>
+          <li><a href="/login">Entrar / Cadastro</a></li>
+        <?php endif; ?>
+        <li><a href="/adocao">Projeto</a></li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/compra"><i class="fas fa-shopping-cart"></i></a></li>
+      </ul>
+          <i id="menu-toggle" class="fas fa-bars"></i>
 
     </header>
     <nav id="container-nav">

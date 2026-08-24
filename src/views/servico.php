@@ -18,8 +18,14 @@
 <body id="container-adoption">
   <header id="container-header">
         <h1><img src="/assets/img/petmania.png" alt="Pet - Mania" height="150em"></h1>
+        <?php session_start(); ?>
         <ul id="menu">
-            <li><a href="/login">Entrar / Cadastro</a></li>
+            <?php if (!empty($_SESSION['username'])): ?>
+                <li><a href="#">Olá, <?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
+                <li><a href="/logout">Sair</a></li>
+            <?php else: ?>
+                <li><a href="/login">Entrar / Cadastro</a></li>
+            <?php endif; ?>
             <li><a href="/adocao">Projeto</a></li>
             <li><a href="/compra"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
@@ -34,7 +40,27 @@
         </ul>
     </nav>
     <main id="container-main">
-        <form action="" method="POST">
+        <?php
+        // Session already started in header, but ensure it's available
+        if (session_status() === PHP_SESSION_NONE) session_start();
+
+        if (!empty($_SESSION['username'])) {
+            echo '<p class="mb-3">Bem-vindo, ' . htmlspecialchars($_SESSION['username']) . '! Cadastre seu pet abaixo.</p>';
+        } else {
+            echo '<p class="mb-3">Faça login para cadastrar um pet.</p>';
+        }
+
+        if (!empty($_SESSION['error'])) {
+            echo '<div class="alert alert-danger">' . htmlspecialchars($_SESSION['error']) . '</div>';
+            unset($_SESSION['error']);
+        }
+        if (!empty($_SESSION['success'])) {
+            echo '<div class="alert alert-success">' . htmlspecialchars($_SESSION['success']) . '</div>';
+            unset($_SESSION['success']);
+        }
+
+        ?>
+        <form action="/pet_store" method="POST">
             <h2>Cadastro de Pet</h2>
             <div class="style-form">
                 <label for="nome">Nome do Pet:</label>

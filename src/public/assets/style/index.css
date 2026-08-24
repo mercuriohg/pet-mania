@@ -1,13 +1,40 @@
-@import url('./cadastro.css');
-@import url('./reset.css');
-@import url('./header.css');
-@import url('./404.css');
-@import url('./login.css');
-@import url('./responsivo.css');
-:root{
-    --color-primary: #59b2e6;
-    --color-secondary: #31a4e2;
-    --color-tertiary: #FFFFFF;
-    --color-quaternary: #6CB4EE;
-    --text: #e68416;
+@import url("./cadastro.css");
+@import url("./reset.css");
+@import url("./header.css");
+@import url("./404.css");
+@import url("./login.css");
+@import url("./responsivo.css");
+:root {
+  --color-primary: #59b2e6;
+  --color-secondary: #31a4e2;
+  --color-tertiary: #ffffff;
+  --color-quaternary: #6cb4ee;
+  --text: #e68416;
+}
+
+/* Padroniza imagens do site */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cards de produto: força altura fixa e crop inteligente */
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Logo/header: tamanho controlado e responsivo */
+#container-header h1 img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 1200px) {
+  .card-img-top {
+    height: 260px;
+  }
 }

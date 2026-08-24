@@ -1,4 +1,4 @@
-#container-main{background-color:var(--color-quartenary);color:var(--text); display:flex;justify-content:center;align-items:center;height:100vh;}
+#container-main{background-color:var(--color-quartenary);color:var(--text); display:flex;justify-content:center;align-items:center;height:100vh; flex-direction:column; gap:20px;}
 
 /*CADASTRO DOS PETS*/
 .style-form{display:flex;flex-direction:column;gap:10px;width:300px;}

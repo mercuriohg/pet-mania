@@ -1,18 +1,21 @@
-CREATE TABLE IF NOT EXISTS user{
-    id_user INT PRIMARY KEY,
-    name VARCHAR(80),
-    email VARCHAR(80),
-    senha_hash VARCHAR(100),
-    senha_confirm,
-    id_pet FOREIGN KEY;
-}
-
-
-CREATE TABLE IF NOT EXISTS pet{
-    id_pet INT PRIMARY KEY,
-    name VARCHAR(80),
-    nascimento DATE,
-    especie VARCHAR(45),
-    prontuario LONGTEXT,
-    genero VARCHAR(10);
-}
+-- Schema for Pet Mania
+PRAGMA foreign_keys = ON;
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username VARCHAR(80) NOT NULL UNIQUE,
+    email VARCHAR(120) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS pets (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    owner_id INTEGER NOT NULL,
+    name VARCHAR(80) NOT NULL,
+    birthdate DATE,
+    species VARCHAR(45),
+    record TEXT,
+    gender VARCHAR(20),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY(owner_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE INDEX IF NOT EXISTS idx_pets_owner ON pets(owner_id);

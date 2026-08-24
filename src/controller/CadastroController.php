@@ -3,13 +3,36 @@ class CadastroController {
     public function cadastro() {
         session_start();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $usuario = $_POST['username'];
-            $senha = $_POST['password'];
+            $usuario = trim($_POST['username'] ?? '');
+            $email = trim($_POST['email'] ?? '');
+            $senha = $_POST['password'] ?? '';
 
-            // Aqui você pode adicionar a lógica de cadastro, como salvar no banco de dados
-            // Por enquanto, vamos apenas redirecionar para a página de login
-            header('Location: /login');
-            exit();
+            if ($usuario === '' || $email === '' || $senha === '') {
+                $_SESSION['error'] = 'Preencha todos os campos.';
+                header('Location: /cadastro');
+                exit();
+            }
+
+            require_once __DIR__ . '/Database.php';
+            $pdo = Database::getConnection();
+
+            $hash = password_hash($senha, PASSWORD_DEFAULT);
+
+            $stmt = $pdo->prepare('INSERT INTO users (username, email, password_hash) VALUES (:username, :email, :password_hash)');
+            try {
+                $stmt->execute([
+                    ':username' => $usuario,
+                    ':email' => $email,
+                    ':password_hash' => $hash
+                ]);
+
+                header('Location: /login');
+                exit();
+            } catch (PDOException $e) {
+                $_SESSION['error'] = 'Erro ao cadastrar: ' . $e->getMessage();
+                header('Location: /cadastro');
+                exit();
+            }
         }
     }
 }
